@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ZainNova Portfolio</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <style>
+    body {
+      background: #0d1117;
+      color: #c9d1d9;
+      font-family: 'Segoe UI', sans-serif;
+    }
+    .sidebar {
+      height: 100vh;
+      background: #161b22;
+      padding: 20px;
+      position: fixed;
+      top: 0; left: 0;
+      width: 250px;
+      overflow-y: auto;
+    }
+    .sidebar a {
+      color: #58a6ff;
+      text-decoration: none;
+      display: block;
+      margin: 15px 0;
+    }
+    .sidebar h2 {
+      color: #58a6ff;
+      margin-bottom: 20px;
+    }
+    .main {
+      margin-left: 270px;
+      padding: 30px;
+    }
+    .card {
+      background: #1f2937;
+      color: #fff;
+      border: 1px solid #30363d;
+      border-radius: 12px;
+      box-shadow: 0 0 12px rgba(0,0,0,0.3);
+      margin-bottom: 20px;
+    }
+    .profile-img {
+      position: fixed;
+      top: 10px;
+      right: 20px;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2px solid #58a6ff;
+      box-shadow: 0 0 6px rgba(88, 166, 255, 0.6);
+      transition: transform 0.3s;
+    }
+    .profile-img:hover {
+      transform: scale(1.05);
+    }
+    h3 {
+      margin-top: 40px;
+    }
+    .skills-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .skill-pill {
+      background: #21262d;
+      color: #58a6ff;
+      padding: 6px 12px;
+      border-radius: 20px;
+      font-size: 14px;
+      border: 1px solid #30363d;
+    }
+    .form-control {
+      background-color: #161b22;
+      border: 1px solid #30363d;
+      color: #c9d1d9;
+    }
+    .form-control:focus {
+      background-color: #161b22;
+      color: #fff;
+      border-color: #58a6ff;
+      box-shadow: 0 0 0 0.2rem rgba(88, 166, 255, 0.25);
+    }
+    .btn-submit {
+      background-color: #238636;
+      color: white;
+      border: none;
+    }
+    .btn-submit:hover {
+      background-color: #2ea043;
+    }
+    @media (max-width: 768px) {
+      .sidebar {
+        position: relative;
+        width: 100%;
+        height: auto;
+      }
+      .main {
+        margin-left: 0;
+        padding: 15px;
+      }
+      .profile-img {
+        position: static;
+        margin: 0 auto 20px auto;
+        display: block;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Sidebar -->
+  <div class="sidebar">
+    <h2>ZainNova 🚀</h2>
+    <a href="#about">👨‍💼 About</a>
+    <a href="#skills">🛠️ Skills</a>
+    <a href="#github">💻 GitHub</a>
+    <a href="#huggingface">🤗 Hugging Face</a>
+    <a href="#contact">📨 Contact</a>
+  </div>
+
+  <!-- Main Content -->
+  <div class="main">
+    <img src="assets/zain_small.jpeg" alt="Zain Profile" class="profile-img"/>
+
+    <!-- About Me -->
+    <section id="about">
+      <h3>👨‍💼 About Me</h3>
+      <p>
+        Hi, I’m <strong>Zain Javed</strong>, a passionate developer and AI enthusiast focused on building impactful web applications and machine learning models. This portfolio showcases a selection of my public work. Feel free to explore and reach out!
+      </p>
+    </section>
+
+    <!-- Skills -->
+    <section id="skills">
+      <h3>🛠️ Skills</h3>
+      <div class="skills-list">
+        <span class="skill-pill">HTML</span>
+        <span class="skill-pill">CSS</span>
+        <span class="skill-pill">JavaScript</span>
+        <span class="skill-pill">Python</span>
+        <span class="skill-pill">Flask</span>
+        <span class="skill-pill">NumPy</span>
+        <span class="skill-pill">Pandas</span>
+        <span class="skill-pill">Matplotlib</span>
+        <span class="skill-pill">Seaborn</span>
+        <span class="skill-pill">Machine Learning</span>
+        <span class="skill-pill">Deep Learning</span>
+        <span class="skill-pill">Artificial Intelligence</span>
+        <span class="skill-pill">Generative AI</span>
+        <span class="skill-pill">Chatbot Developer</span>
+        <span class="skill-pill">Jervis Developer</span>
+        <span class="skill-pill">Streamlit</span>
+        <span class="skill-pill">Ollama</span>
+        <span class="skill-pill">Fine-tuning GPT-2</span>
+        <span class="skill-pill">Agentic AI</span>
+        <span class="skill-pill">C++</span>
+        <span class="skill-pill">C#</span>
+        <span class="skill-pill">Assembly</span>
+        <span class="skill-pill">Database</span>
+        <span class="skill-pill">RAG</span>
+        <span class="skill-pill">PyTorch</span>
+        <span class="skill-pill">Keras</span>
+      </div>
+    </section>
+
+    <!-- GitHub Projects -->
+    <section id="github">
+      <h3>💻 GitHub Projects</h3>
+      <div class="row" id="github-projects"></div>
+    </section>
+
+    <!-- Hugging Face Projects -->
+    <section id="huggingface">
+      <h3>🤗 Hugging Face Spaces</h3>
+      <div class="row" id="huggingface-projects"></div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+      <h3>📨 Contact Me</h3>
+      <form action="https://formspree.io/f/your-form-id" method="POST" class="mt-4">
+        <div class="mb-3">
+          <label for="name" class="form-label">Your Name</label>
+          <input type="text" name="name" class="form-control" id="name" required>
+        </div>
+        <div class="mb-3">
+          <label for="email" class="form-label">Email address</label>
+          <input type="email" name="_replyto" class="form-control" id="email" required>
+        </div>
+        <div class="mb-3">
+          <label for="message" class="form-label">Your Message</label>
+          <textarea name="message" class="form-control" id="message" rows="4" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-submit">Send Message</button>
+      </form>
+    </section>
+  </div>
+
+  <script>
+    // GitHub Repos
+    async function fetchGitHubRepos() {
+      const container = document.getElementById("github-projects");
+      try {
+        const res = await fetch("https://api.github.com/users/ZainJaved869/repos");
+        const repos = await res.json();
+
+        repos.sort((a, b) => b.stargazers_count - a.stargazers_count).forEach(repo => {
+          const card = `
+            <div class="col-md-6 col-lg-4">
+              <div class="card p-3 h-100 d-flex flex-column">
+                <h5>${repo.name}</h5>
+                <p>${repo.description || "No description provided."}</p>
+                <a href="${repo.html_url}" target="_blank" class="btn btn-outline-light mt-auto">🔗 View on GitHub</a>
+              </div>
+            </div>`;
+          container.innerHTML += card;
+        });
+      } catch {
+        container.innerHTML = "<p>⚠️ Unable to load GitHub projects.</p>";
+      }
+    }
+
+    // Hugging Face Spaces
+    async function fetchHFSpaces() {
+      const container = document.getElementById("huggingface-projects");
+      try {
+        const res = await fetch("https://huggingface.co/api/spaces?author=RaoZain");
+        const spaces = await res.json();
+
+        spaces.forEach(space => {
+          const card = `
+            <div class="col-md-6 col-lg-4">
+              <div class="card p-3 h-100 d-flex flex-column">
+                <h5>${space.id.split("/")[1]}</h5>
+                <p>${space.cardData?.description || "No description available."}</p>
+                <a href="https://huggingface.co/spaces/${space.id}" target="_blank" class="btn btn-outline-light mt-auto">🚀 Open Space</a>
+              </div>
+            </div>`;
+          container.innerHTML += card;
+        });
+      } catch {
+        container.innerHTML = "<p>⚠️ Unable to load Hugging Face projects.</p>";
+      }
+    }
+
+    // Load Data
+    fetchGitHubRepos();
+    fetchHFSpaces();
+  </script>
+</body>
+</html>
